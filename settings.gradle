@@ -1,0 +1,10 @@
+rootProject.name = 'ecommerce'
+
+include 'services:cart'
+include 'services:item'
+include 'services:pay'
+findProject(':services:pay')?.name = 'pay'
+include 'services:pay'
+findProject(':services:pay')?.name = 'pay'
+include 'core'
+
