@@ -1,0 +1,165 @@
+[
+  {
+    "name": "Mechanical Keyboard (Hot-swap RGB)",
+    "description": "A satisfying keyboard for coding sessions and late-night builds.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 129.99
+    }
+  },
+  {
+    "name": "Ergonomic Office Chair",
+    "description": "For long Spring Boot debugging and system design grind sessions.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 249.99
+    }
+  },
+  {
+    "name": "Standing Desk Converter",
+    "description": "Alternate between sitting and standing while designing microservices.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 119.99
+    }
+  },
+  {
+    "name": "Noise Cancelling Headphones",
+    "description": "Block distractions while focusing on DSA or coding projects.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 199.99
+    }
+  },
+  {
+    "name": "Dual Monitor Arm Mount",
+    "description": "Clean setup for IntelliJ, logs, and browser side-by-side.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 89.99
+    }
+  },
+
+  {
+    "name": "Chocolate Peanut Butter Protein Powder",
+    "description": "High-protein fuel for lifting and running recovery.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 39.99
+    }
+  },
+  {
+    "name": "Fairlife Milk (2%)",
+    "description": "High-protein milk for shakes and recovery meals.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 4.99
+    }
+  },
+  {
+    "name": "Greek Yogurt Mega Pack",
+    "description": "Easy protein snack for busy coding days.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 10.99
+    }
+  },
+  {
+    "name": "Cottage Cheese Tub",
+    "description": "Slow-digesting protein for night recovery.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 3.99
+    }
+  },
+  {
+    "name": "Frozen Strawberries Bag",
+    "description": "For smoothies and Ninja Creami experiments.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 6.49
+    }
+  },
+
+  {
+    "name": "Daily Running Shoes",
+    "description": "Built for 5-mile runs at consistent pace.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 139.99
+    }
+  },
+  {
+    "name": "Hydration Belt",
+    "description": "For long runs and half marathon prep.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 24.99
+    }
+  },
+  {
+    "name": "Fitness Smartwatch",
+    "description": "Tracks runs, lifts, calories, and recovery.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 299.99
+    }
+  },
+  {
+    "name": "Foam Roller Set",
+    "description": "Recovery tool after leg day or long runs.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 29.99
+    }
+  },
+  {
+    "name": "Resistance Bands Kit",
+    "description": "Home workout accessory for strength training.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 19.99
+    }
+  },
+
+  {
+    "name": "Minecraft Server Hosting Plan",
+    "description": "Multiplayer world for downtime and friends.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 14.99
+    }
+  },
+  {
+    "name": "Lightweight Gaming Mouse",
+    "description": "Fast response for gaming and productivity.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 79.99
+    }
+  },
+  {
+    "name": "Ultra-Wide Monitor",
+    "description": "Perfect for coding, debugging, and dashboards.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 399.99
+    }
+  },
+  {
+    "name": "RGB Desk Lighting Kit",
+    "description": "Makes late-night coding sessions feel less painful.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 22.99
+    }
+  },
+  {
+    "name": "Discord Nitro Subscription",
+    "description": "For gaming and staying connected with friends.",
+    "price": {
+      "currencyUnit": "USD",
+      "amount": 9.99
+    }
+  }
+]
