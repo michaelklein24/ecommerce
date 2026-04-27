@@ -1,10 +1,14 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
 rootProject.name = 'ecommerce'
 
-include 'services:cart'
-include 'services:item'
-include 'services:pay'
-findProject(':services:pay')?.name = 'pay'
-include 'services:pay'
-findProject(':services:pay')?.name = 'pay'
+include 'gateway'
 include 'core'
-
+include 'services:cart'
+include 'services:pay'
+include 'services:item'

@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: item
+          uri: ${ITEM_SERVICE_URI}
+          predicates:
+            - Path=/item/**

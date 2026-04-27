@@ -17,7 +17,7 @@ public class ItemController {
     private final ItemService itemService;
 
     @GetMapping()
-    public GetItemsResponse getItems(@RequestBody GetItemsRequest request) {
+    public GetItemsResponse getItems() {
         List<ItemModel> items = itemService.getAllItems();
         return new GetItemsResponse.Builder().items(items).build();
     }

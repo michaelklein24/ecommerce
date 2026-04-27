@@ -16,8 +16,7 @@
 
 # Gradle build directory
 .gradle/
-/build/
-*/build/
+build/
 
 # Java compiled files
 *.class
