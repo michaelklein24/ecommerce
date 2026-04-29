@@ -12,3 +12,5 @@ include 'core'
 include 'services:cart'
 include 'services:pay'
 include 'services:item'
+include 'services:auth'
+

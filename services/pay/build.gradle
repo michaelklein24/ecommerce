@@ -1,7 +1,3 @@
-plugins {
-    id 'org.springframework.boot'
-}
-
 dependencies {
     // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     implementation 'org.springframework.boot:spring-boot-starter-web:4.0.5'

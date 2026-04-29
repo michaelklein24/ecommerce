@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class JsonDataLoader implements CommandLineRunner {
     private final ItemRepository itemRepository;
-    private final ObjectMapper objectMapper;
+    private ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
     public void run(String... args) throws Exception {

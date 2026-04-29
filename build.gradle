@@ -1,47 +1,57 @@
+import org.springframework.boot.gradle.tasks.run.BootRun
+
 plugins {
-    id 'org.springframework.boot' version '3.3.5'
+    id 'org.springframework.boot' version '4.0.6'
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
-ext.activeProfile = "dev"
+ext {
+    springBootVersion = '4.0.6'
+    springCloudVersion = '5.0.1'
+}
 
 allprojects {
-    group = 'com.michaelklein.ecommerce'
+    group = 'com.michaelklein'
     version = '1.0.0'
 
     plugins.withId("org.springframework.boot") {
-
-        tasks.withType(org.springframework.boot.gradle.tasks.run.BootRun).configureEach {
-            args = ["--spring.profiles.active=${rootProject.ext.activeProfile}"]
+        tasks.withType(BootRun).configureEach {
+            args = ["--spring.profiles.active=${project.findProperty('environment') ?: 'dev'}"]
         }
     }
 }
 
 subprojects {
+    // Only apply Java/Spring config to leaf projects (those with src/main/java)
+    // This excludes pure container modules like 'services'
+    if (file("$projectDir/src/main/java").exists()) {
+        apply plugin: 'java'
+        apply plugin: 'org.springframework.boot'
+        apply plugin: 'io.spring.dependency-management'
 
-    apply plugin: 'java'
-
-    apply plugin: 'io.spring.dependency-management'
-
-    repositories {
-        mavenCentral()
-    }
-
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(21)
+        repositories {
+            mavenCentral()
         }
-    }
 
-    dependencies {
-        // Lombok (safe shared setup)
-        compileOnly 'org.projectlombok:lombok'
-        annotationProcessor 'org.projectlombok:lombok'
+        java {
+            toolchain {
+                languageVersion = JavaLanguageVersion.of(26)
+            }
+        }
 
-        testCompileOnly 'org.projectlombok:lombok'
-        testAnnotationProcessor 'org.projectlombok:lombok'
+        dependencies {
+            compileOnly 'org.projectlombok:lombok'
+            annotationProcessor 'org.projectlombok:lombok'
 
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+            testCompileOnly 'org.projectlombok:lombok'
+            testAnnotationProcessor 'org.projectlombok:lombok'
+
+            testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        }
+
+        tasks.named('test') {
+            useJUnitPlatform()
+        }
     }
 }
 
