@@ -5,14 +5,17 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
-ext {
-    springBootVersion = '4.0.6'
-    springCloudVersion = '5.0.1'
-}
+
 
 allprojects {
     group = 'com.michaelklein'
     version = '1.0.0'
+
+    ext {
+        springBootVersion = '4.0.6'
+        springCloudVersion = '5.0.1'
+        lombokVersion = "1.18.42"
+    }
 
     plugins.withId("org.springframework.boot") {
         tasks.withType(BootRun).configureEach {
@@ -35,16 +38,22 @@ subprojects {
 
         java {
             toolchain {
-                languageVersion = JavaLanguageVersion.of(26)
+                languageVersion = JavaLanguageVersion.of(21)
+            }
+        }
+
+        dependencyManagement {
+            imports {
+                mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
             }
         }
 
         dependencies {
-            compileOnly 'org.projectlombok:lombok'
-            annotationProcessor 'org.projectlombok:lombok'
+            compileOnly "org.projectlombok:lombok:${lombokVersion}"
+            annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-            testCompileOnly 'org.projectlombok:lombok'
-            testAnnotationProcessor 'org.projectlombok:lombok'
+            testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+            testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
             testImplementation 'org.springframework.boot:spring-boot-starter-test'
         }
@@ -59,6 +68,20 @@ tasks.register("runGateway") {
     dependsOn(":gateway:bootRun")
 }
 
+tasks.register("runConfigServer") {
+    dependsOn(":config:bootRun")
+}
+
 tasks.register("runItemMicroservice") {
     dependsOn(":services:item:bootRun")
 }
+
+tasks.register("runUserMicroservice") {
+    dependsOn(":services:user:bootRun")
+}
+
+tasks.register("runAuthMicroservice") {
+    dependsOn(":services:auth:bootRun")
+}
+
+

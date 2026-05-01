@@ -9,8 +9,11 @@ rootProject.name = 'ecommerce'
 
 include 'gateway'
 include 'core'
+include 'config'
 include 'services:cart'
 include 'services:pay'
 include 'services:item'
 include 'services:auth'
+include 'services:user'
+include 'services:user-api'
 

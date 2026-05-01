@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-service
+  config:
+    name: "configserver"
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+server:
+  port: 8887
